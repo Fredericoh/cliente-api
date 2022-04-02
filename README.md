@@ -1,6 +1,6 @@
-# API de cadastro de cliente utilizando Spring Boot 2
+# API de cadastro de clientes
 
-### Conhecimentos e Tecnologias utilizadas
+### Conhecimentos e Tecnologias Utilizadas
 
 * Spring Boot 2 (Fonte: https://spring.io/projects/spring-boot#learn)
 
@@ -8,7 +8,7 @@
 
 * Maven (Fonte: https://maven.apache.org/)
 
-### Serviços do projeto
+### Documentação do Serviços
 
 * Os serviços podem ser acessados através do endereço (http://localhost:8080/swagger-ui/index.html)
 
