@@ -12,4 +12,8 @@
 
 * Os serviços podem ser acessados através do endereço (http://localhost:8080/swagger-ui/index.html)
 
+### Video
+
+* https://drive.google.com/file/d/1ntIUTKGwXV0810fLWimcxhLSPpFLGbae/view?usp=sharing
+
 
