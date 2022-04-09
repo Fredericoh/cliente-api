@@ -1,18 +1,18 @@
 package com.clienteapi.resource;
 
 import com.clienteapi.model.Cliente;
+import com.clienteapi.repository.ClienteRepository;
 import com.clienteapi.service.ClienteService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping("/clientes")
@@ -20,10 +20,12 @@ import javax.validation.Valid;
 public class ClienteResource {
 
     private final ClienteService clienteService;
+    private final ClienteRepository clienteRepository;
 
     @GetMapping
-    public ResponseEntity<Iterable<Cliente>> listar(Pageable pageable){
-        return new ResponseEntity<>(clienteService.listar(pageable), HttpStatus.OK);
+    public @ResponseBody
+    List<Cliente> list() {
+        return clienteRepository.findAll();
     }
 
     @PostMapping
